@@ -6,7 +6,7 @@ import QnA from './components/QnA/QnA'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App m-10">
       <Header></Header>
       <Blog></Blog>
       <QnA></QnA>
