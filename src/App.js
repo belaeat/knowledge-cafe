@@ -1,13 +1,17 @@
-import React from 'react';
+import React from 'react'
+import './App.css'
+import Header from './components/Header/Header'
+import Blog from './components/Blog/Blog'
+import QnA from './components/QnA/QnA'
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <button className="btn">Button</button>
-      <button className="btn btn-primary">Button</button>
-      <button className="btn btn-secondary">Button</button>
+    <div className="App">
+      <Header></Header>
+      <Blog></Blog>
+      <QnA></QnA>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
