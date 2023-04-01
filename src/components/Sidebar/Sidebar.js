@@ -8,6 +8,7 @@ const Sidebar = () => {
             </div>
             <div className='p-5 bg-slate-200 rounded-lg my-5'>
                 <div>
+                    <h3 className='mb-3 font-bold'>Bookmarked blogs: {}</h3>
                     <h3 className='font-bold text-xl bg-white p-3 rounded-lg'>{}</h3>
                 </div>
             </div>

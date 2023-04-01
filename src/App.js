@@ -8,7 +8,7 @@ import Blog from './components/Blog/Blog'
 
 function App() {
   return (
-    <div >
+    <div>
 
       <div className='m-10'>
         <Header></Header>
@@ -21,7 +21,7 @@ function App() {
         </div>
 
         <div className='sidebar'>
-          <Sidebar></Sidebar>
+          
         </div>
 
       </div>

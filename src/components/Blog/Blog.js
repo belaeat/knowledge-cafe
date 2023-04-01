@@ -1,11 +1,17 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Blog = (props) => {
-    const {id, name, title,  featureImage, authorImage, readingTime} = props.blog;
+    const { id, name, title, featureImage, authorImage, readingTime } = props.blog;
+
+    const markAsRead = props.markAsRead;
+
+
     return (
         <div>
             <div className='m-auto w-[90%]'>
-                <div className="card m-15 w-[90%] m-auto bg-white p-5 my-10" id={id}>
+                <div className="card w-[90%] m-auto bg-green-50 p-5 my-5" id={id}>
                     <img src={featureImage} alt="" />
                     <div className="flex my-5 items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -16,8 +22,10 @@ const Blog = (props) => {
                             </div>
                         </div>
                         <div className="flex">
-                            <p><small><span className='readingTime'>{readingTime}</span> min read</small></p>
-
+                            <p className='mr-2'><small><span className='readingTime'>{readingTime}</span> min read</small></p>
+                            <div>
+                                <FontAwesomeIcon icon={faBookmark} />
+                            </div>
                         </div>
                     </div>
                     <h1 className='card-title text-4xl font-bold'>{title}</h1>
@@ -25,7 +33,8 @@ const Blog = (props) => {
                         <p><small>#beginner</small></p>
                         <p><small>#programming</small></p>
                     </div>
-                    <a href="#" className='underline text-blue-600 font-semibold my-5'>Mark as read</a>
+                    <button onClick={() => props.markAsRead(props.blog.readingTime)} className='underline text-blue-600 font-semibold text-left my-5'>Mark as read</button>
+
 
                 </div>
             </div>
