@@ -7,10 +7,18 @@ import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
   return (
-    <div className="App m-10">
-      <Header></Header>
-      <Blog></Blog>
-      <Sidebar></Sidebar>
+    <div >
+      <div className='m-10'>
+        <Header></Header>
+      </div>
+      <div className='main'>
+        <div className='blog'>
+          <Blog></Blog>
+        </div>
+        <div className='sidebar'>
+          <Sidebar></Sidebar>
+        </div>
+      </div>
       <QnA></QnA>
     </div>
   )
